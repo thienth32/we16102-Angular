@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GenderPipe } from './pipes/gender.pipe';
-import { ProductListComponent } from './screens/product-list/product-list.component';
+import { PostUnitComponent } from './components/post-unit/post-unit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenderPipe,
-    ProductListComponent,
+    PostUnitComponent,
   ],
   imports: [
     BrowserModule,
