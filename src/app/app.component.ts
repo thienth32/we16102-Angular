@@ -52,4 +52,7 @@ export class AppComponent {
     console.log(removeId);
     this.posts = this.posts.filter(item => item.id != removeId);
   }
+  saveForm(formObj: any){
+    this.posts.push(formObj);
+  }
 }

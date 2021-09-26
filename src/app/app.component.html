@@ -1,3 +1,5 @@
+<app-post-form (onSave)="saveForm($event)"></app-post-form>
+<hr>
 <div *ngFor="let item of posts">
     <app-post-unit [postData]="item" (onRemove)="delete($event)"></app-post-unit>
 </div>

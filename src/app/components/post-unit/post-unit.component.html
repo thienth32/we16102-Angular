@@ -1,2 +1,15 @@
-<p>{{postData.title}}</p>
-<button (click)="btnClick()">Xóa</button>
+<div class="row">
+    <div class="col-2">
+        <img [src]="postData.imgUrl" class="img-thumbnail">
+    </div>
+    <div class="col-8">
+        <h2>{{postData.title}}</h2>
+        <p>{{postData.shortDesc}}</p>
+    </div>
+    <div class="col-1">
+        <button class="btn btn-sm btn-info" (click)="btnClick()">Sửa</button>
+        <button class="btn btn-sm btn-danger" (click)="btnClick()">Xóa</button>
+    </div>
+    
+    
+</div>
