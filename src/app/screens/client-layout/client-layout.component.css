@@ -1,0 +1,12 @@
+header{
+    height: 70px;
+    background-color: azure;
+}
+main{
+    min-height: 300px;
+}
+
+footer{
+    height: 150px;
+    background-color: bisque;
+}
