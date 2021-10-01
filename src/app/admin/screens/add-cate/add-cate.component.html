@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="cateForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-4 offset-4">
+                <div class="form-group">
+                    <label for="">Tên danh mục</label>
+                    <input type="text" class="form-control" formControlName="name" > 
+                </div>
+                <br>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

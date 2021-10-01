@@ -13,7 +13,6 @@ export class ClientComponent implements OnInit {
   ngOnInit(): void {
     this.cateService.getList().subscribe(data => {
       this.categories = data;
-      console.log(this.categories);
     })
   }
 
