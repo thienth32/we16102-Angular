@@ -14,4 +14,7 @@ export class CategoryService {
     let listUrl = `${environment.apiUrl}/categories` ;
     return this.http.get<Category[]>(listUrl);
   }
+  addCate(obj: Category): Observable<Category>{
+    return this.http.post<Category>(`${environment.apiUrl}/categories`, obj);
+  }
 }

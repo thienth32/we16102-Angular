@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-add-cate',
@@ -11,13 +13,17 @@ export class AddCateComponent implements OnInit {
   cateForm: FormGroup = new FormGroup({
     name: new FormControl()
   })
-  constructor() { }
+  constructor(private cateService: CategoryService,
+            private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    console.log(this.cateForm.value);
+    this.cateService.addCate(this.cateForm.value).subscribe(data => {
+      console.log(data);
+      this.router.navigate(['/']);
+    })
   }
 
 }

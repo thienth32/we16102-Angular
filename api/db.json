@@ -1,45 +1,61 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "email": "admin@gmail.com",
-            "password": "123456",
-            "avatar": ""
-        },
-        {
-            "id": 2,
-            "email": "member@gmail.com",
-            "password": "123456",
-            "avatar": ""
-        }
-    ],
-    "categories":[
-        {"id": 1, "name": "Thực phẩm"},
-        {"id": 2, "name": "Rau"},
-        {"id": 3, "name": "Hoa quả"},
-        {"id": 4, "name": "Nấm"}
-    ],
-    "products": [
-        {
-            "id": 1,
-            "categoryId": 1,
-            "name": "Thịt bò thăn",
-            "price": 200,
-            "image": ""
-        },
-        {
-            "id": 2,
-            "categoryId": 1,
-            "name": "Móng heo",
-            "price": 50,
-            "image": ""
-        },
-        {
-            "id": 3,
-            "categoryId": 2,
-            "name": "Rau xà lách",
-            "price": 3,
-            "image": ""
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "avatar": ""
+    },
+    {
+      "id": 2,
+      "email": "member@gmail.com",
+      "password": "123456",
+      "avatar": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Thực phẩm"
+    },
+    {
+      "id": 2,
+      "name": "Rau"
+    },
+    {
+      "id": 3,
+      "name": "Hoa quả"
+    },
+    {
+      "id": 4,
+      "name": "Nấm"
+    },
+    {
+      "name": "Cá",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Thịt bò thăn",
+      "price": 200,
+      "image": ""
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Móng heo",
+      "price": 50,
+      "image": ""
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "name": "Rau xà lách",
+      "price": 3,
+      "image": ""
+    }
+  ]
 }
