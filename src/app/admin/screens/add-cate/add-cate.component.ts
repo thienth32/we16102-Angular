@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 
@@ -11,7 +11,10 @@ import { CategoryService } from 'src/app/services/category.service';
 export class AddCateComponent implements OnInit {
 
   cateForm: FormGroup = new FormGroup({
-    name: new FormControl()
+    name: new FormControl('som', [
+      Validators.required,
+      Validators.minLength(4)
+    ])
   })
   constructor(private cateService: CategoryService,
             private router: Router) { }
@@ -19,7 +22,15 @@ export class AddCateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  get f()
+  {
+      return this.cateForm.controls;
+  }
+
+  onSubmit():any{
+    if(this.cateForm.invalid){
+      return false;
+    }
     this.cateService.addCate(this.cateForm.value).subscribe(data => {
       console.log(data);
       this.router.navigate(['/']);
