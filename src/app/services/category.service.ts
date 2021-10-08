@@ -17,4 +17,9 @@ export class CategoryService {
   addCate(obj: Category): Observable<Category>{
     return this.http.post<Category>(`${environment.apiUrl}/categories`, obj);
   }
+
+  getCateByName(keyword: string): Observable<Category[]>{
+    console.log(1);
+    return this.http.get<Category[]>(`${environment.apiUrl}/categories?name_like=${keyword}`);
+  }
 }

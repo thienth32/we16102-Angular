@@ -1,0 +1,9 @@
+<p>add-cate works!</p>
+{{cateForm.value | json}}
+<form [formGroup]="cateForm">
+    <input type="text" formControlName="name">
+    <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)">
+        <p class="text-danger" *ngIf="f.name.errors?.required">Hãy nhập tên</p>
+        <p class="text-danger" *ngIf="f.name.errors?.uniqueCate">Tên danh mục đã tồn tại</p>
+    </div>
+</form>
