@@ -1,4 +1,5 @@
-<form [formGroup]="loginForm">
+{{loginForm.value | json}}
+<form [formGroup]="loginForm" (submit)="submitForm()">
     <div>
         <label for="">Email</label>
         <input type="text" formControlName="email">

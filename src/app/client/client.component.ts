@@ -11,9 +11,9 @@ export class ClientComponent implements OnInit {
   constructor(private cateService: CategoryService) { }
 
   ngOnInit(): void {
-    this.cateService.getList().subscribe(data => {
-      this.categories = data;
-    })
+    // this.cateService.getList().subscribe(data => {
+      // this.categories = data;
+    // })
   }
 
 }
