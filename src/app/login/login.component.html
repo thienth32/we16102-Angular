@@ -1,17 +1,17 @@
-<form action="" [formGroup]="loginForm">
+<form [formGroup]="loginForm">
     <div>
         <label for="">Email</label>
         <input type="text" formControlName="email">
         <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
-            <p *ngIf="f.email.error?.required">Hãy nhập email</p>
-            <p *ngIf="f.email.error?.email">Không đúng định dạng email</p>
+            <p *ngIf="f.email.errors?.required">Hãy nhập email</p>
+            <p *ngIf="f.email.errors?.email">Không đúng định dạng email</p>
         </div>
     </div>
     <div>
         <label for="">Mật khẩu</label>
         <input type="password" formControlName="password">
         <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
-            <p *ngIf="f.password.error?.required">Hãy nhập password</p>
+            <p *ngIf="f.password.errors?.required">Hãy nhập password</p>
         </div>
     </div>
     <div>
