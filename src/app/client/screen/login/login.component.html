@@ -1,11 +1,10 @@
 {{loginForm.value | json}}
 <form [formGroup]="loginForm" (submit)="submitForm()">
     <div>
-        <label for="">Email</label>
-        <input type="text" formControlName="email">
-        <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
-            <p *ngIf="f.email.errors?.required">Hãy nhập email</p>
-            <p *ngIf="f.email.errors?.email">Không đúng định dạng email</p>
+        <label for="">Username</label>
+        <input type="text" formControlName="username">
+        <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)">
+            <p *ngIf="f.username.errors?.required">Hãy nhập username</p>
         </div>
     </div>
     <div>
